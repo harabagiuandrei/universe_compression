@@ -63,7 +63,7 @@ class UniverseZone:
             size[axis] = int(length)
             if behavior:
                 behaviors[axis] = re.findall(r"\.[a-zA-Z0-9_]+\(\)", behavior)  # Extract individual behaviors
-                behaviors[axis] = [b[1:-2] for b in behaviors[axis]]  # Remove leading '.' and trailing '()'
+                behaviors[axis] = [b[1:-2] for b in behaviors[axis]]
                 # behaviors[axis] = behavior.split('.')
         
         uz = UniverseZone((size['x'], size['y'], size['z']))
