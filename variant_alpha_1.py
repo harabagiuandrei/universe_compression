@@ -9,6 +9,7 @@ class PhysicsObject:
     def apply_behavior(self, behavior_name, function, *args):
         """Apply a callable function to modify the object's behavior."""
         if callable(function):
+            #TODO:aici se seteaza un STATE al function peste *args??
             self.properties[behavior_name] = function(*args)
         else:
             raise ValueError("Behavior function must be callable.")
@@ -45,9 +46,11 @@ class UniverseZone:
         """Exports the universe zone to {x(N).behavior1().behavior2(), y(N), z(N)} format."""
         notation = []
         for axis, length in zip(['x', 'y', 'z'], self.size):
-            behaviors = ".".join(self.behaviors.get(axis, []))
-            # behaviors = behaviors + "()"
-            notation.append(f"{{{axis}({length}){'.' + behaviors if behaviors else ''}}}")
+            # behaviors = ".".join(self.behaviors.get(axis, []))
+            # # behaviors = behaviors + "()"
+            # notation.append(f"{{{axis}({length}){'.' + behaviors if behaviors else ''}}}")
+            behaviors = "".join([f".{b}()" for b in self.behaviors.get(axis, [])])
+            notation.append(f"{{{axis}({length}){behaviors}}}")
         return ", ".join(notation)
 
     @staticmethod
@@ -123,4 +126,3 @@ notation = "{x(1000000).wave().gravity()},{y(1000000)},{z(1000000)}"
 universe3 = UniverseZone.from_compressed_notation(notation)
 print("Parsed UniverseZone3:", universe3)
 print("Exported Notation3:", universe3.to_compressed_notation())
-
