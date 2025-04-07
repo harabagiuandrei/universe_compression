@@ -1,0 +1,2 @@
+next level 1
+{x(30).gravity().wave()}, {y(30).electric().noise(0.1)}, {z(30)}, {t(100).flow().invert()}, {ψ(64).entropy().qresonance()}
