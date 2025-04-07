@@ -1,0 +1,15 @@
+some tree
+
+0	Quantum	q	qwrap(), superpose(), entangle()
+1	Psi	ψ	inform(), observe(), collapse()
+2	Hilbert	H	project(), operator()
+3	Energy	E	wave(), heat(), invert()
+4	Gravity	g	pull(), warp(), bend()
+5	Density	D	compress(), expand()
+6	Dark Matter	DM	cloak(), resist()
+7	Structure	S	connect(), break()
+8	Wave	W	frequency(), resonance()
+9	Electron	e	excite(), drop()
+10	EM Field	EM	electric(), magnetic()
+11	Time	t	flow(), invert(), step()
+12	Space	x, y, z	move(), vibrate(), reflect()
