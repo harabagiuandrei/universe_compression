@@ -1,0 +1,15 @@
+{
+  {x(100).spherical().sun()},
+  {y(100).spherical().sun()},
+  {z(100).spherical().sun()}
+},
+{
+  {x(100).spherical().sun_resistant_layer_one()},
+  {y(100).spherical().sun_resistant_layer_one()},
+  {z(100).spherical().sun_resistant_layer_one()}
+},
+{
+  {x(100).spherical().sun_absorbant_layer_one()},
+  {y(100).spherical().sun_absorbant_layer_one()},
+  {z(100).spherical().sun_absorbant_layer_one()}
+}
